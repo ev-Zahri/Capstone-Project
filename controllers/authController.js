@@ -108,8 +108,86 @@ exports.login = async (req, res) => {
 };
 
 
+exports.getUserProfile = async (req, res) => {
+    try {
+        const user = await User.findById(req.user.id).select('-password'); // Exclude password
+        if (!user) {
+            return res.status(404).json({
+                status: "error",
+                message: "User not found",
+                error: { details: "No user found with the given ID." }
+            });
+        }
+        res.status(200).json({
+            status: "success",
+            message: "User profile fetched successfully",
+            data: { user }
+        });
+    } catch (error) {
+        res.status(500).json({
+            status: "error",
+            message: "Internal server error",
+            error: { details: "An unexpected error occurred" }
+        });
+    }
+};
 
 
-// asndjahsbdaiusdn
+exports.updateUserProfile = async (req, res) => {
+    const { name, email, password } = req.body;
 
-//Ellooo bisa ngga?
+    try {
+        const user = await User.findById(req.user.id);
+        if (!user) {
+            return res.status(404).json({
+                status: "error",
+                message: "User not found",
+                error: { details: "No user found with the given ID." }
+            });
+        }
+
+        // Update fields if they are provided
+        if (name) user.name = name;
+        if (email) user.email = email;
+        if (password) user.password = await bcrypt.hash(password, 10);
+
+        await user.save();
+
+        res.status(200).json({
+            status: "success",
+            message: "User profile updated successfully",
+            data: { user }
+        });
+    } catch (error) {
+        res.status(500).json({
+            status: "error",
+            message: "Internal server error",
+            error: { details: "An unexpected error occurred" }
+        });
+    }
+};
+
+
+exports.deleteUser = async (req, res) => {
+    try {
+        const user = await User.findByIdAndDelete(req.user.id);
+        if (!user) {
+            return res.status(404).json({
+                status: "error",
+                message: "User not found",
+                error: { details: "No user found with the given ID." }
+            });
+        }
+
+        res.status(200).json({
+            status: "success",
+            message: "User deleted successfully"
+        });
+    } catch (error) {
+        res.status(500).json({
+            status: "error",
+            message: "Internal server error",
+            error: { details: "An unexpected error occurred" }
+        });
+    }
+};
