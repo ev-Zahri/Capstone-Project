@@ -9,9 +9,12 @@ exports.register = async (req, res) => {
         // Cek apakah user sudah terdaftar
         let user = await User.findOne({ email });
         if (user) {
-            return res.status(400).json({ 
-                status: "Failed",
+            return res.status(400).json({
+                status: "error",
                 message: "User already exists",
+                error: {
+                    details: "The user has registered an account with the same email address",
+                }
             });
         }
 
@@ -31,13 +34,10 @@ exports.register = async (req, res) => {
             expiresIn: '1h',
         });
 
-        res.status(201).json({ 
+        res.status(200).json({
             status: "success",
             message: "User registered successfully",
             data: {
-                userId: user.id,
-                username: user.name,
-                email: user.email,
                 token: token
             }
         });
@@ -46,14 +46,14 @@ exports.register = async (req, res) => {
             status: "error",
             message: "Internal server error",
             error: {
-              code: 500,
-              details: "An unexpected error occurred"
+                code: 500,
+                details: "An unexpected error occurred"
             }
         });
     }
 };
 
-const login = async (req, res) => {
+exports.login = async (req, res) => {
     const { email, password } = req.body;
 
     // Validasi input
@@ -65,23 +65,34 @@ const login = async (req, res) => {
         // Cari user berdasarkan email
         const user = await User.findOne({ email });
         if (!user) {
-            return res.status(400).json({ message: 'Invalid credentials' });
+            return res.status(400).json({
+                status: "error",
+                message: "Invalid credentials",
+                error: {
+                    details: "Authentication failed. Please check your username and password."
+                }
+            });
         }
 
         // Periksa password
         const isMatch = await user.matchPassword(password);
         if (!isMatch) {
-            return res.status(400).json({ message: 'Invalid credentials' });
+            return res.status(400).json({
+                status: "error",
+                message: "Invalid credentials",
+                error: {
+                    details: "Authentication failed. Please check your username and password."
+                }
+            });
         }
 
         // Buat token JWT
         const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
 
-        res.status(201).json({ 
+        res.status(200).json({
             status: "success",
-            message: "User login successfully",
+            message: "User logged in successfully",
             data: {
-                email: user.email,
                 token: token
             }
         });
@@ -90,8 +101,7 @@ const login = async (req, res) => {
             status: "error",
             message: "Internal server error",
             error: {
-              code: 500,
-              details: "An unexpected error occurred"
+                details: "An unexpected error occurred"
             }
         });
     }

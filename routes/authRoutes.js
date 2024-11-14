@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const { register, login } = require('../controllers/authController');
+const authenticateToken = require('../middleware/authMiddleware');
 
-// Endpoint registrasi user baru
-router.post('/register', register);
-router.post('/login', login);
+router.post('/register', authenticateToken, register);
+router.post('/login', authenticateToken, login);
 
 module.exports = router;
