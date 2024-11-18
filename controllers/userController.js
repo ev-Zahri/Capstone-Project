@@ -19,7 +19,6 @@ exports.getUser = async (req, res) => {
       });
     }
 
-    // Ambil data dari dokumen pertama yang cocok
     const userDoc = querySnapshot.docs[0];
     const userData = userDoc.data();
 
@@ -39,10 +38,8 @@ exports.getUser = async (req, res) => {
   }
 };
 
-
-// Memperbarui informasi user
 exports.updateUser = async (req, res) => {
-  const { id } = req.params; // ID yang digunakan untuk pencarian
+  const { id } = req.params; 
   const updates = req.body;
 
   try {
@@ -50,7 +47,6 @@ exports.updateUser = async (req, res) => {
     const usersRef = db.collection('users');
     const querySnapshot = await usersRef.where('id', '==', id).get();
 
-    // Jika dokumen tidak ditemukan
     if (querySnapshot.empty) {
       return res.status(404).json({
         status: 404,
@@ -69,7 +65,6 @@ exports.updateUser = async (req, res) => {
     const updatedAt = new Date().toISOString();
     await userRef.update({ ...updates, updatedAt });
 
-    // Ambil data terbaru dari dokumen
     const updatedDoc = await userRef.get();
 
     return res.status(200).json({
