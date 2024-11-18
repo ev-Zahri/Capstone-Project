@@ -1,16 +1,14 @@
-const mongoose = require('mongoose');
+const admin = require("firebase-admin");
+const serviceAccount = require("../firebaseServiceAccountKey.json");
 
-const connectDB = async () => {
-    try {
-        await mongoose.connect(process.env.MONGODB_URL);
-        console.log('MongoDB connected');
-    } catch (error) {
-        console.error(error.message);
-        process.exit(1);
-    }
-};
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://capstone-project-7f169.firebaseio.com"
+});
 
-module.exports = connectDB;
+const db = admin.firestore();
+module.exports = { admin, db };
+
 
 // Import the functions you need from the SDKs you need
 // import { initializeApp } from "firebase/app";
