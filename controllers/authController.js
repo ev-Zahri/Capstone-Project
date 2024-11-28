@@ -69,84 +69,84 @@ exports.loginUser = async (req, res) => {
     }
 };
 
-//Ambil Data Pengguna (GET)
-exports.getUserById = async (req, res) => {
-    const { userId } = req.params;
-    try {
-        const userRef = db.collection('users').doc(userId);
-        const doc = await userRef.get();
-        if (!doc.exists) {
-            return res.status(404).json({
-                status: 404,
-                message: "User not found",
-            });
-        }
-        return res.status(200).json({
-            status: 200,
-            message: "User retrieved successfully",
-            data: doc.data(),
-        });
-    } catch (error) {
-        return res.status(500).json({
-            status: 500,
-            message: "Internal server error",
-            error: { details: error.message },
-        });
-    }
-};
+// //Ambil Data Pengguna (GET)
+// exports.getUserById = async (req, res) => {
+//     const { userId } = req.params;
+//     try {
+//         const userRef = db.collection('users').doc(userId);
+//         const doc = await userRef.get();
+//         if (!doc.exists) {
+//             return res.status(404).json({
+//                 status: 404,
+//                 message: "User not found",
+//             });
+//         }
+//         return res.status(200).json({
+//             status: 200,
+//             message: "User retrieved successfully",
+//             data: doc.data(),
+//         });
+//     } catch (error) {
+//         return res.status(500).json({
+//             status: 500,
+//             message: "Internal server error",
+//             error: { details: error.message },
+//         });
+//     }
+// };
 
-//Perbarui Data Pengguna (PUT)
-exports.updateUserById = async (req, res) => {
-    const { userId } = req.params;
-    const { email, password } = req.body;
-    const updatedAt = new Date().toISOString();
+// //Perbarui Data Pengguna (PUT)
+// exports.updateUserById = async (req, res) => {
+//     const { userId } = req.params;
+//     const { email, password } = req.body;
+//     const updatedAt = new Date().toISOString();
 
-    try {
-        const userRef = db.collection('users').doc(userId);
-        const doc = await userRef.get();
-        if (!doc.exists) {
-            return res.status(404).json({
-                status: 404,
-                message: "User not found",
-            });
-        }
-        await userRef.update({ email, password, updatedAt });
-        return res.status(200).json({
-            status: 200,
-            message: "User updated successfully",
-        });
-    } catch (error) {
-        return res.status(500).json({
-            status: 500,
-            message: "Internal server error",
-            error: { details: error.message },
-        });
-    }
-};
+//     try {
+//         const userRef = db.collection('users').doc(userId);
+//         const doc = await userRef.get();
+//         if (!doc.exists) {
+//             return res.status(404).json({
+//                 status: 404,
+//                 message: "User not found",
+//             });
+//         }
+//         await userRef.update({ email, password, updatedAt });
+//         return res.status(200).json({
+//             status: 200,
+//             message: "User updated successfully",
+//         });
+//     } catch (error) {
+//         return res.status(500).json({
+//             status: 500,
+//             message: "Internal server error",
+//             error: { details: error.message },
+//         });
+//     }
+// };
 
-//Hapus Pengguna (DELETE)
-exports.deleteUserById = async (req, res) => {
-    const { userId } = req.params;
+// //Hapus Pengguna (DELETE)
+// exports.deleteUserById = async (req, res) => {
+//     const { userId } = req.params;
 
-    try {
-        const userRef = db.collection('users').doc(userId);
-        const doc = await userRef.get();
-        if (!doc.exists) {
-            return res.status(404).json({
-                status: 404,
-                message: "User not found",
-            });
-        }
-        await userRef.delete();
-        return res.status(200).json({
-            status: 200,
-            message: "User deleted successfully",
-        });
-    } catch (error) {
-        return res.status(500).json({
-            status: 500,
-            message: "Internal server error",
-            error: { details: error.message },
-        });
-    }
-};
+//     try {
+//         const userRef = db.collection('users').doc(userId);
+//         const doc = await userRef.get();
+//         if (!doc.exists) {
+//             return res.status(404).json({
+//                 status: 404,
+//                 message: "User not found",
+//             });
+//         }
+//         await userRef.delete();
+//         return res.status(200).json({
+//             status: 200,
+//             message: "User deleted successfully",
+//         });
+//     } catch (error) {
+//         return res.status(500).json({
+//             status: 500,
+//             message: "Internal server error",
+//             error: { details: error.message },
+//         });
+//     }
+// };
