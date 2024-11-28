@@ -15,7 +15,6 @@ app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 // app.use("/api/animals", animalsRoutes);
 
-module.exports = app;
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
