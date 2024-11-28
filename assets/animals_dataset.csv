@@ -1,0 +1,30 @@
+id,name,description,facts,imageURL,audioURL
+1,Elephant,The Elephant is a species of Mammal.,Elephants are commonly found in Savanna. |They are herbivores.,https://example.com/elephant.jpg,https://example.com/elephant.mp3
+2,Lion,The Lion is a species of Mammal.,Lions are commonly found in Grasslands. |They are carnivores.,https://example.com/lion.jpg,https://example.com/lion.mp3
+3,Parrot,The Parrot is a species of Bird.,Parrots are commonly found in Rainforest. |They are herbivores.,https://example.com/parrot.jpg,https://example.com/parrot.mp3
+4,Eagle,The Eagle is a species of Bird.,Eagles are commonly found in Mountains. |They are carnivores.,https://example.com/eagle.jpg,https://example.com/eagle.mp3
+5,Cobra,The Cobra is a species of Reptile.,Cobras are commonly found in Forest. |They are carnivores.,https://example.com/cobra.jpg,https://example.com/cobra.mp3
+6,Crocodile,The Crocodile is a species of Reptile.,Crocodiles are commonly found in Swamps. |They are carnivores.,https://example.com/crocodile.jpg,https://example.com/crocodile.mp3
+7,Shark,The Shark is a species of Fish.,Sharks are commonly found in Ocean. |They are carnivores.,https://example.com/shark.jpg,https://example.com/shark.mp3
+8,Salmon,The Salmon is a species of Fish.,Salmons are commonly found in Rivers. |They are omnivores.,https://example.com/salmon.jpg,https://example.com/salmon.mp3
+9,Frog,The Frog is a species of Amphibian.,Frogs are commonly found in Wetlands. |They are insectivores.,https://example.com/frog.jpg,https://example.com/frog.mp3
+10,Salamander,The Salamander is a species of Amphibian.,Salamanders are commonly found in Forest. |They are insectivores.,https://example.com/salamander.jpg,https://example.com/salamander.mp3
+11,Butterfly,The Butterfly is a species of Insect.,Butterflys are commonly found in Gardens. |They are herbivores.,https://example.com/butterfly.jpg,https://example.com/butterfly.mp3
+12,Ant,The Ant is a species of Insect.,Ants are commonly found in Soil. |They are omnivores.,https://example.com/ant.jpg,https://example.com/ant.mp3
+13,Kangaroo,The Kangaroo is a species of Mammal.,Kangaroos are commonly found in Grasslands. |They are herbivores.,https://example.com/kangaroo.jpg,https://example.com/kangaroo.mp3
+14,Penguin,The Penguin is a species of Bird.,Penguins are commonly found in Antarctica. |They are carnivores.,https://example.com/penguin.jpg,https://example.com/penguin.mp3
+15,Gecko,The Gecko is a species of Reptile.,Geckos are commonly found in Deserts. |They are insectivores.,https://example.com/gecko.jpg,https://example.com/gecko.mp3
+16,Clownfish,The Clownfish is a species of Fish.,Clownfishs are commonly found in Coral reefs. |They are omnivores.,https://example.com/clownfish.jpg,https://example.com/clownfish.mp3
+17,Tiger,The Tiger is a species of Mammal.,Tigers are commonly found in Forest. |They are carnivores.,https://example.com/tiger.jpg,https://example.com/tiger.mp3
+18,Owl,The Owl is a species of Bird.,Owls are commonly found in Forest. |They are carnivores.,https://example.com/owl.jpg,https://example.com/owl.mp3
+19,Komodo Dragon,The Komodo Dragon is a species of Reptile.,Komodo Dragons are commonly found in Islands. |They are carnivores.,https://example.com/komodo dragon.jpg,https://example.com/komodo dragon.mp3
+20,Goldfish,The Goldfish is a species of Fish.,Goldfishs are commonly found in Ponds. |They are omnivores.,https://example.com/goldfish.jpg,https://example.com/goldfish.mp3
+21,Toad,The Toad is a species of Amphibian.,Toads are commonly found in Wetlands. |They are insectivores.,https://example.com/toad.jpg,https://example.com/toad.mp3
+22,Bee,The Bee is a species of Insect.,Bees are commonly found in Fields. |They are herbivores.,https://example.com/bee.jpg,https://example.com/bee.mp3
+23,Panda,The Panda is a species of Mammal.,Pandas are commonly found in Mountains. |They are herbivores.,https://example.com/panda.jpg,https://example.com/panda.mp3
+24,Flamingo,The Flamingo is a species of Bird.,Flamingos are commonly found in Wetlands. |They are omnivores.,https://example.com/flamingo.jpg,https://example.com/flamingo.mp3
+25,Iguana,The Iguana is a species of Reptile.,Iguanas are commonly found in Rainforest. |They are herbivores.,https://example.com/iguana.jpg,https://example.com/iguana.mp3
+26,Tuna,The Tuna is a species of Fish.,Tunas are commonly found in Ocean. |They are carnivores.,https://example.com/tuna.jpg,https://example.com/tuna.mp3
+27,Wolf,The Wolf is a species of Mammal.,Wolfs are commonly found in Forest. |They are carnivores.,https://example.com/wolf.jpg,https://example.com/wolf.mp3
+28,Sparrow,The Sparrow is a species of Bird.,Sparrows are commonly found in Urban areas. |They are herbivores.,https://example.com/sparrow.jpg,https://example.com/sparrow.mp3
+29,Spider,The Spider is a species of Insect.,Spiders are commonly found in Various. |They are carnivores.,https://example.com/spider.jpg,https://example.com/spider.mp3
