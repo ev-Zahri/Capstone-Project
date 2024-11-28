@@ -1,8 +1,8 @@
-const express = require("express");
-const router = express.Router();
-const { getAllAnimals, getAnimalById } = require("../controllers/animalController");
+// const express = require("express");
+// const router = express.Router();
+// const { getAllAnimals, getAnimalById } = require("../controllers/animalController");
 
-router.get("/", getAllAnimals);
-router.get("/:animalId", getAnimalById);
+// router.get("/", getAllAnimals);
+// router.get("/:animalId", getAnimalById);
 
-module.exports = router;
+// module.exports = router;
