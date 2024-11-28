@@ -2,7 +2,7 @@
   "name": "capstone-project",
   "version": "1.0.0",
   "description": "Aplikasi AnimalPeek: Connect with Nature Through Your Lens",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "vercel dev"
