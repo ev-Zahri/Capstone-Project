@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const dataFilePath = path.join(__dirname, '../assets/animals_quiz.json');
+const dataFilePath = path.join(__dirname, '../assets/dataset/animals_quiz.json');
 
 const readDataFromFile = () => {
     try {

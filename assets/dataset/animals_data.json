@@ -2,176 +2,246 @@
   {
     "name": "Kelelawar",
     "scientific_name": "Chiroptera",
+    "image_url": "../animalsImage/kelelawar.jpg",
+    "sound_url": "../animalsSound/kelelawar.mp3",
     "description": "Kelelawar adalah satu-satunya mamalia yang bisa terbang! Mereka hidup di berbagai habitat seperti gua, pohon, dan bahkan bangunan kosong. Kebanyakan kelelawar aktif di malam hari (nokturnal) dan memiliki kemampuan luar biasa untuk menggunakan 'sonar alami' yang disebut ekolokasi. Ini membantu mereka menemukan makanan bahkan dalam kegelapan total! Makanan kelelawar bervariasi, ada yang makan buah-buahan (frugivora), serangga (insektivora), dan ada juga yang menghisap nektar bunga. Ukurannya beragam, mulai dari kelelawar kecil sepanjang 6 cm hingga kelelawar besar seperti kelelawar buah dengan sayap sepanjang 1,5 meter."
   },
   {
     "name": "Beruang",
     "scientific_name": "Ursidae",
+    "image_url": "../animalsImage/beruang.jpg",
+    "sound_url": "../animalsSound/beruang.mp3",
     "description": "Beruang adalah hewan besar dan kuat yang hidup di hutan, pegunungan, atau wilayah bersalju. Ada banyak jenis beruang, seperti beruang coklat, beruang kutub, dan beruang madu. Beruang dikenal sebagai omnivora; mereka memakan buah, ikan, dan bahkan serangga! Ukuran beruang bisa sangat besar, dengan berat mencapai 600 kilogram untuk beruang kutub. Mereka juga pelari cepat meskipun terlihat besar dan lamban! Beruang kutub misalnya, adalah perenang hebat yang bisa menjelajahi lautan untuk mencari makanan."
   },
   {
     "name": "Lebah",
     "scientific_name": "Apis mellifera",
+    "image_url": "../animalsImage/lebah.jpg",
+    "sound_url": "../animalsSound/lebah.mp3",
     "description": "Lebah adalah serangga kecil yang sangat penting untuk lingkungan karena membantu penyerbukan tanaman. Lebah tinggal di sarang yang disebut koloni dan dipimpin oleh ratu lebah. Habitat mereka biasanya dekat dengan bunga dan pohon. Mereka memakan nektar dan serbuk sari, lalu menghasilkan madu! Lebah memiliki tubuh kecil dengan warna kuning dan hitam yang mencolok. Salah satu kemampuan khusus mereka adalah 'menari' untuk memberi tahu lebah lain lokasi bunga yang penuh nektar."
   },
   {
     "name": "Kumbang",
     "scientific_name": "Coleoptera",
+    "image_url": "../animalsImage/kumbang.jpg",
+    "sound_url": "../animalsSound/kumbang.mp3",
     "description": "Kumbang adalah serangga dengan cangkang keras yang melindungi sayap mereka. Habitat kumbang beragam, dari hutan hingga padang rumput, bahkan taman rumah kita. Makanan kumbang tergantung pada jenisnya; ada yang memakan tanaman, kayu, atau serangga kecil lainnya. Ukurannya bisa sekecil beberapa milimeter hingga lebih dari 10 cm untuk kumbang besar seperti kumbang badak. Kumbang memiliki kemampuan luar biasa untuk menyamar dengan lingkungan, membuat mereka sulit ditemukan oleh pemangsa."
   },
   {
     "name": "Kupu-kupu",
     "scientific_name": "Lepidoptera",
+    "image_url": "../animalsImage/kupu_kupu.jpg",
+    "sound_url": "../animalsSound/kupu_kupu.mp3",
     "description": "Kupu-kupu adalah serangga cantik dengan sayap berwarna-warni yang hidup di taman, hutan, atau padang rumput. Mereka memakan nektar dari bunga, sehingga sering terlihat terbang dari satu bunga ke bunga lain. Kupu-kupu memiliki tubuh kecil, sayap besar, dan antena yang membantu mereka mencari makanan. Yang menarik, kupu-kupu melalui metamorfosis lengkap, dimulai dari telur, menjadi ulat, kepompong, dan akhirnya menjadi kupu-kupu dewasa yang indah."
   },
   {
     "name": "Kucing",
     "scientific_name": "Felis catus",
+    "image_url": "../animalsImage/kucing.jpg",
+    "sound_url": "../animalsSound/Kucing.mp3",
     "description": "Kucing adalah hewan peliharaan yang lucu dan penuh rasa ingin tahu. Mereka hidup di rumah atau lingkungan manusia. Kucing adalah karnivora, sehingga makanannya biasanya daging atau ikan. Ukuran kucing rata-rata sekitar 50 cm panjangnya, dengan ekor berbulu yang indah. Kucing memiliki kemampuan luar biasa untuk melompat tinggi dan mendarat dengan lembut berkat keseimbangan tubuh yang sempurna."
   },
   {
     "name": "Ulat",
     "scientific_name": "Caterpillar",
+    "image_url": "../animalsImage/ulat.jpg",
+    "sound_url": "-",
     "description": "Ulat adalah tahap awal kehidupan dari kupu-kupu atau ngengat. Mereka hidup di daun pohon atau tanaman dan memakan dedaunan sebagai makanan utama. Ulat memiliki tubuh kecil dan berbulu atau berduri tergantung pada jenisnya. Salah satu kemampuan khusus ulat adalah mengubah diri menjadi kepompong dan akhirnya bermetamorfosis menjadi kupu-kupu atau ngengat yang cantik."
   },
   {
     "name": "Kecoa",
     "scientific_name": "Blattodea",
+    "image_url": "../animalsImage/kecoa.jpg",
+    "sound_url": "../animalsSound/kecoa.mp3",
     "description": "Kecoa adalah serangga yang sering ditemukan di tempat lembab dan gelap. Mereka adalah omnivora dan dapat memakan hampir apa saja, mulai dari makanan manusia hingga bahan organik lainnya. Ukuran kecoa rata-rata sekitar 3-7 cm. Salah satu kemampuan unik kecoa adalah daya tahan mereka yang luar biasa, bahkan mereka bisa hidup beberapa hari tanpa kepala!"
   },
   {
     "name": "Sapi",
     "scientific_name": "Bos taurus",
+    "image_url": "../animalsImage/sapi.jpg",
+    "sound_url": "../animalsSound/sapi.mp3",
     "description": "Sapi adalah hewan ternak yang hidup di padang rumput atau peternakan. Mereka adalah herbivora yang memakan rumput dan biji-bijian. Ukuran sapi sangat besar, dengan berat mencapai 800 kg atau lebih. Sapi dikenal karena menghasilkan susu dan daging untuk manusia. Mereka juga hewan yang tenang dan sering terlihat sedang beristirahat atau mengunyah makanan."
   },
   {
     "name": "Kepiting",
     "scientific_name": "Brachyura",
+    "image_url": "../animalsImage/kepiting.jpg",
+    "sound_url": "../animalsSound/kepiting.mp3",
     "description": "Kepiting adalah hewan yang hidup di pantai, laut, atau sungai. Mereka adalah omnivora, memakan ganggang, ikan kecil, atau sisa-sisa makanan di dasar laut. Ukuran kepiting bervariasi dari beberapa cm hingga lebih dari 1 meter untuk kepiting raksasa. Kepiting memiliki kemampuan luar biasa untuk berjalan ke samping dan menggunakan capit mereka untuk melindungi diri atau menangkap makanan."
   },
   {
     "name": "Anjing",
     "scientific_name": "Canis lupus familiaris",
+    "image_url": "../animalsImage/anjing.jpg",
+    "sound_url": "../animalsSound/anjing.mp3",
     "description": "Anjing adalah hewan peliharaan yang setia dan pintar. Mereka hidup bersama manusia di rumah atau kebun. Anjing adalah omnivora, meskipun biasanya diberi makanan khusus. Ukuran anjing sangat bervariasi tergantung rasnya, dari yang kecil seperti Chihuahua hingga yang besar seperti Great Dane. Kemampuan anjing mencakup indra penciuman yang tajam dan kemampuan untuk dilatih melakukan berbagai tugas."
   },
   {
     "name": "Capung",
     "scientific_name": "Odonata",
+    "image_url": "../animalsImage/capung.jpg",
+    "sound_url": "../animalsSound/capung.mp3",
     "description": "Capung adalah serangga dengan tubuh panjang dan sayap transparan. Mereka hidup di dekat air seperti sungai, danau, atau rawa. Capung adalah karnivora yang memakan serangga kecil seperti nyamuk. Ukuran capung biasanya 2-5 cm dengan kemampuan terbang yang sangat cepat dan gesit, bahkan bisa melayang di udara. Capung juga dikenal karena warnanya yang indah dan mengilap."
   },
   {
     "name": "Bebek",
     "scientific_name": "Anatidae",
+    "image_url": "../animalsImage/bebek.jpg",
+    "sound_url": "../animalsSound/bebek.mp3",
     "description": "Bebek adalah burung air yang hidup di kolam, danau, atau sungai. Mereka memakan tumbuhan air, ikan kecil, dan serangga. Ukuran bebek rata-rata sekitar 50 cm panjangnya. Bebek memiliki kaki berselaput yang membantu mereka berenang dengan baik. Mereka juga memiliki bulu yang tahan air, sehingga tetap kering meski sering berada di air."
   },
   {
     "name": "Gajah",
     "scientific_name": "Elephantidae",
+    "image_url": "../animalsImage/gajah.jpg",
+    "sound_url": "../animalsSound/gajah.mp3",
     "description": "Gajah adalah mamalia darat terbesar di dunia! Mereka hidup di hutan, sabana, dan padang rumput, terutama di Asia dan Afrika. Gajah adalah herbivora yang memakan rumput, daun, dan buah-buahan. Ukuran tubuh gajah bisa mencapai 3 meter tingginya dan berat hingga 6 ton. Salah satu kemampuan unik mereka adalah belalainya yang bisa digunakan untuk mengambil makanan, menyemprotkan air, dan bahkan untuk menunjukkan kasih sayang!"
   },
   {
     "name": "Lalat",
     "scientific_name": "Musca domestica",
+    "image_url": "../animalsImage/lalat.jpg",
+    "sound_url": "-",
     "description": "Lalat adalah serangga kecil yang hidup hampir di mana saja, terutama di daerah dekat makanan atau sisa-sisa organik. Mereka memakan cairan seperti jus buah, madu, atau bahan organik yang membusuk. Lalat memiliki kemampuan terbang yang cepat dan sering terlihat melayang di udara. Meskipun ukurannya kecil, sekitar 1 cm, lalat memiliki mata majemuk yang besar sehingga bisa melihat ke segala arah."
   },
   {
     "name": "Kambing",
     "scientific_name": "Capra aegagrus hircus",
+    "image_url": "../animalsImage/kambing.jpg",
+    "sound_url": "../animalsSound/kambing.mp3",
     "description": "Kambing adalah hewan ternak yang sering dipelihara untuk susu, daging, atau bulu. Mereka hidup di daerah pegunungan, padang rumput, atau peternakan. Kambing adalah herbivora yang memakan rumput, daun, dan biji-bijian. Mereka memiliki ukuran tubuh sekitar 50-90 cm dan dikenal karena kemampuan memanjat yang luar biasa, bahkan di tempat yang curam!"
   },
   {
     "name": "Gorila",
     "scientific_name": "Gorilla",
+    "image_url": "../animalsImage/gorila.jpg",
+    "sound_url": "../animalsSound/gorila.mp3",
     "description": "Gorila adalah primata besar yang hidup di hutan tropis Afrika. Mereka adalah herbivora yang memakan daun, buah-buahan, dan tunas bambu. Ukuran tubuh gorila bisa mencapai 1,8 meter dan berat lebih dari 200 kilogram. Gorila dikenal karena kecerdasannya dan sering menggunakan alat sederhana untuk membantu aktivitas mereka, seperti memecahkan buah keras atau membuat sarang."
   },
   {
     "name": "Belalang",
     "scientific_name": "Caelifera",
+    "image_url": "../animalsImage/belalang.jpg",
+    "sound_url": "-",
     "description": "Belalang adalah serangga yang sering ditemukan di padang rumput atau ladang. Mereka memakan dedaunan dan tanaman hijau lainnya. Belalang memiliki tubuh ramping dengan kaki belakang yang panjang untuk melompat jauh. Salah satu kemampuan khusus mereka adalah menghasilkan suara dengan menggesekkan sayap mereka, yang sering digunakan untuk menarik perhatian pasangan."
   },
   {
     "name": "Hamster",
     "scientific_name": "Cricetinae",
+    "image_url": "../animalsImage/hamster.jpg",
+    "sound_url": "-",
     "description": "Hamster adalah hewan kecil yang sering dipelihara sebagai hewan peliharaan. Mereka hidup di habitat alami seperti padang pasir atau ladang, tetapi lebih sering ditemukan di kandang buatan manusia. Hamster adalah omnivora yang memakan biji-bijian, buah-buahan, dan serangga kecil. Mereka dikenal karena kebiasaan menyimpan makanan di pipi mereka untuk dimakan nanti!"
   },
   {
     "name": "Kudanil",
     "scientific_name": "Hippopotamus amphibius",
+    "image_url": "../animalsImage/kudanil.jpg",
+    "sound_url": "../animalsSound/kudanil.mp3",
     "description": "Kudanil adalah salah satu mamalia terbesar yang hidup di sungai dan danau di Afrika. Mereka adalah herbivora yang memakan rumput di malam hari. Tubuh kudanil sangat besar, dengan berat mencapai 3.000 kilogram, tetapi mereka adalah perenang yang sangat baik. Kulit mereka menghasilkan cairan khusus yang berfungsi seperti tabir surya alami untuk melindungi dari panas matahari."
   },
   {
     "name": "Kuda",
     "scientific_name": "Equus ferus caballus",
+    "image_url": "../animalsImage/kuda.jpg",
+    "sound_url": "../animalsSound/kuda.mp3",
     "description": "Kuda adalah hewan yang sering digunakan untuk transportasi, olahraga, atau pekerjaan di ladang. Mereka hidup di padang rumput atau peternakan. Kuda adalah herbivora yang memakan rumput dan jerami. Ukuran tubuh kuda bervariasi tergantung jenisnya, tetapi mereka dikenal karena kecepatan dan kekuatan mereka yang luar biasa. Kuda juga memiliki ingatan yang sangat baik dan mampu mengenali manusia yang akrab dengan mereka."
   },
   {
     "name": "Ladybug",
     "scientific_name": "Coccinellidae",
+    "image_url": "../animalsImage/ladybug.jpg",
+    "sound_url": "-",
     "description": "Ladybug adalah serangga kecil dengan tubuh bulat dan bercak hitam di atas latar belakang merah atau oranye. Mereka hidup di taman, ladang, dan hutan. Makanan utama mereka adalah kutu daun, sehingga mereka sangat berguna untuk pertanian. Ukurannya kecil, sekitar 1 cm, tetapi mereka dikenal sebagai simbol keberuntungan di banyak budaya."
   },
   {
     "name": "Singa",
     "scientific_name": "Panthera leo",
+    "image_url": "../animalsImage/singa.jpg",
+    "sound_url": "../animalsSound/singa.mp3",
     "description": "Singa adalah kucing besar yang sering disebut sebagai 'raja hutan'. Mereka hidup di sabana dan hutan di Afrika. Singa adalah karnivora yang memakan hewan besar seperti rusa atau zebra. Ukuran tubuh mereka bisa mencapai panjang 3 meter, termasuk ekornya. Singa jantan memiliki surai besar yang membuat mereka terlihat gagah, sementara singa betina adalah pemburu utama dalam kelompoknya."
   },
   {
     "name": "Kadal",
     "scientific_name": "Lacertilia",
+    "image_url": "../animalsImage/kadal.jpg",
+    "sound_url": "-",
     "description": "Kadal adalah reptil kecil yang hidup di hutan, gurun, atau taman. Mereka adalah omnivora yang memakan serangga, buah-buahan, dan sayuran. Ukuran kadal sangat bervariasi, dari beberapa cm hingga lebih dari 2 meter untuk spesies besar seperti Komodo. Kadal memiliki kemampuan khusus untuk melepaskan ekornya untuk menghindari pemangsa, yang kemudian dapat tumbuh kembali."
   },
   {
     "name": "Monyet",
     "scientific_name": "Cercopithecoidea",
+    "image_url": "../animalsImage/monyet.jpg",
+    "sound_url": "../animalsSound/monyet.mp3",
     "description": "Monyet adalah primata yang hidup di hutan tropis dan subtropis. Mereka adalah omnivora yang memakan buah-buahan, daun, serangga, dan telur burung. Ukuran monyet bervariasi tergantung spesiesnya, dari yang kecil seperti monyet Tamarin hingga yang besar seperti babon. Monyet dikenal karena kecerdasan dan kemampuan mereka untuk memanjat pohon dengan sangat cepat."
   },
   {
     "name": "Tikus",
     "scientific_name": "Mus musculus",
+    "image_url": "../animalsImage/tikus.jpg",
+    "sound_url": "../animalsSound/tikus.mp3",
     "description": "Tikus adalah mamalia kecil yang sering ditemukan di dekat manusia. Mereka hidup di ladang, rumah, atau gudang. Tikus adalah omnivora yang memakan biji-bijian, buah-buahan, dan sisa makanan manusia. Ukuran tubuh tikus sekitar 6-10 cm, dan mereka dikenal karena kemampuan reproduksi yang sangat cepat. Tikus juga memiliki indra penciuman dan pendengaran yang tajam."
   },
   {
     "name": "Panda",
     "scientific_name": "Ailuropoda melanoleuca",
+    "image_url": "../animalsImage/panda.jpg",
+    "sound_url": "-",
     "description": "Panda adalah mamalia yang terkenal dengan bulunya yang berwarna hitam dan putih. Mereka hidup di hutan bambu di Cina. Panda adalah herbivora, dengan makanan utamanya berupa bambu, meskipun sesekali mereka juga makan buah dan serangga kecil. Ukuran panda cukup besar, dengan berat mencapai 150 kg. Salah satu kemampuan unik panda adalah cakar mereka yang membantu memegang bambu dengan mudah saat makan."
   },
   {
     "name": "Babi",
     "scientific_name": "Sus scrofa domesticus",
+    "image_url": "../animalsImage/babi.jpg",
+    "sound_url": "../animalsSound/babi.mp3",
     "description": "Babi adalah hewan ternak yang hidup di peternakan atau padang rumput. Mereka adalah omnivora, memakan tumbuhan dan sisa makanan lainnya. Ukurannya bervariasi tergantung jenisnya, tetapi biasanya beratnya mencapai 100-300 kg. Babi dikenal sebagai hewan yang cerdas, dengan kemampuan mengenali pola dan menyelesaikan masalah sederhana."
   },
   {
     "name": "Merpati",
     "scientific_name": "Columba livia",
+    "image_url": "../animalsImage/merpati.jpg",
+    "sound_url": "../animalsSound/burung_merpati.mp3",
     "description": "Merpati adalah burung yang sering ditemukan di kota-kota atau pedesaan. Mereka hidup di atap rumah, pohon, atau sarang buatan. Merpati memakan biji-bijian, roti, atau makanan kecil lainnya. Ukurannya sekitar 30 cm dengan bulu yang biasanya berwarna abu-abu dan leher mengkilap. Kemampuan unik merpati adalah insting navigasi yang luar biasa, sehingga sering digunakan sebagai pembawa pesan pada zaman dahulu."
   },
   {
     "name": "Badak",
     "scientific_name": "Rhinocerotidae",
+    "image_url": "../animalsImage/badak.jpg",
+    "sound_url": "../animalsSound/badak.mp3",
     "description": "Badak adalah mamalia besar yang hidup di padang rumput dan hutan di Afrika dan Asia. Mereka adalah herbivora, memakan rumput, dedaunan, dan ranting. Berat badak bisa mencapai 2.500 kg, menjadikannya salah satu hewan darat terbesar. Badak memiliki tanduk yang kuat di kepalanya yang digunakan untuk melindungi diri dari predator atau bertarung."
   },
   {
     "name": "Ular",
     "scientific_name": "Serpentes",
+    "image_url": "../animalsImage/ular.jpg",
+    "sound_url": "../animalsSound/ular.mp3",
     "description": "Ular adalah reptil panjang tanpa kaki yang hidup di berbagai habitat seperti hutan, padang pasir, atau rawa. Mereka adalah karnivora yang memakan hewan kecil seperti tikus, burung, atau serangga. Ukuran ular bervariasi dari beberapa cm hingga lebih dari 8 meter seperti ular piton. Ular memiliki kemampuan luar biasa untuk melumpuhkan mangsanya menggunakan racun atau dengan melilitnya."
   },
   {
     "name": "Burung Gereja",
     "scientific_name": "Passer domesticus",
+    "image_url": "../animalsImage/burung_gereja.jpg",
+    "sound_url": "../animalsSound/burung_pipit.mp3",
     "description": "Burung gereja adalah burung kecil yang sering ditemukan di taman atau sekitar rumah. Mereka memakan biji, serangga kecil, dan sisa makanan. Ukuran burung gereja biasanya sekitar 15 cm dengan bulu coklat keabu-abuan. Burung ini terkenal karena kicauannya yang merdu dan sifatnya yang hidup berkelompok."
   },
   {
     "name": "Harimau",
     "scientific_name": "Panthera tigris",
+    "image_url": "../animalsImage/harimau.jpg",
+    "sound_url": "../animalsSound/harimau.mp3",
     "description": "Harimau adalah kucing besar yang hidup di hutan dan padang rumput. Mereka adalah karnivora yang memakan hewan seperti rusa, babi hutan, atau kerbau. Harimau memiliki tubuh besar dengan panjang mencapai 3 meter dan berat hingga 300 kg. Mereka dikenal karena kecepatan, kekuatan, dan pola garis-garis unik pada bulunya yang membantu menyamar di habitatnya."
   },
   {
     "name": "Kalkun",
     "scientific_name": "Meleagris gallopavo",
+    "image_url": "../animalsImage/kalkun.jpg",
+    "sound_url": "-",
     "description": "Kalkun adalah burung besar yang sering hidup di peternakan atau hutan. Mereka adalah omnivora yang memakan biji-bijian, serangga, dan buah. Berat kalkun bisa mencapai 10-15 kg. Kalkun terkenal dengan suara khasnya, yaitu 'gobble-gobble,' dan bulu indah yang sering digunakan untuk upacara tradisional."
   },
   {
     "name": "Zebra",
     "scientific_name": "Equus quagga",
+    "image_url": "../animalsImage/zebra.jpg",
+    "sound_url": "../animalsSound/zebra.mp3",
     "description": "Zebra adalah hewan herbivora yang hidup di padang rumput Afrika. Mereka memakan rumput dan daun. Zebra memiliki tubuh besar dengan panjang sekitar 2 meter dan berat hingga 400 kg. Pola garis hitam putih pada tubuh zebra sangat unik dan membantu mereka untuk menyamar dari pemangsa di habitatnya."
   }
 ]
