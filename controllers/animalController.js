@@ -1,79 +1,67 @@
-// const fs = require("fs");
-// const path = require("path");
-// const csvParser = require("csv-parser");
+const fs = require('fs');
+const path = require('path');
 
-// let animalDataset = [];
+const dataFilePath = path.join(__dirname, '../assets/animals_data.json');
 
-// // Muat dataset dari file CSV saat server dimulai
-// const loadAnimalDataset = async () => {
-//     return new Promise((resolve, reject) => {
-//         const filePath = path.join(__dirname, "../assets/animals_dataset.csv");
-//         const results = [];
-//         fs.createReadStream(filePath)
-//             .pipe(csvParser())
-//             .on("data", (data) => {
-//                 // Konversi fakta dari string ke array
-//                 data.facts = data.facts.split("|");
-//                 results.push(data);
-//             })
-//             .on("end", () => {
-//                 animalDataset = results;
-//                 resolve();
-//             })
-//             .on("error", (error) => {
-//                 reject(error);
-//             });
-//     });
-// };
+const readDataFromFile = () => {
+  try {
+    const data = fs.readFileSync(dataFilePath, 'utf8');
+    return JSON.parse(data);
+  } catch (error) {
+    return res.status(500).json({
+      status: 500,
+      message: "Error reading data from file",
+      error: {
+        data: [],
+        details: error.message,
+      },
+    });
+  }
+};
 
-// // GET /api/animals
-// const getAllAnimals = async (req, res) => {
-//     try {
-//         return res.status(200).json({
-//             status: 200,
-//             message: "Success fetching animals",
-//             data: animalDataset
-//         });
-//     } catch (error) {
-//         return res.status(500).json({
-//             status: 500,
-//             message: "Error fetching animals",
-//             error: {
-//                 details: error.message
-//             }
-//         });
-//     }
-// };
+exports.getAllAnimals = (req, res) => {
+  const animals = readDataFromFile();
+  return res.status(200).json({
+    status: 200,
+    message: "Receive data successfully",
+    data: animals,
+  });
+};
 
-// // GET /api/animals/:animalId
-// const getAnimalById = async (req, res) => {
-//     const { animalId } = req.params;
-//     try {
-//         const animal = animalDataset.find((a) => a.id === animalId);
-//         if (!animal) {
-//             return res.status(404).json({
-//                 status: 404,
-//                 message: "Animals not found",
-//                 error: {
-//                     details: "The animals not found in database.",
-//                 },
-//             });
-//         }
-//         return res.status(200).json({
-//             status: 200,
-//             message: "Success fetching animals",
-//             data: animal
-//         });
-//     } catch (error) {
-//         return res.status(500).json({
-//             status: 500,
-//             message: "Error fetching animal by ID",
-//             error: {
-//                 details: error.message
-//             }
-//         });
-//     }
-// };
+exports.getAnimalByName = (req, res) => {
+  try {
+    const animals = readDataFromFile();
+    const validAnimals = animals.filter(
+      (a) => a && typeof a.name === 'string' && a.name.trim() !== ''
+    );
 
-// // Ekspor fungsi dan inisialisasi dataset
-// module.exports = { getAllAnimals, getAnimalById, loadAnimalDataset };
+    // Cari berdasarkan nama (case-insensitive)
+    const animal = validAnimals.find(
+      (a) => a.name.toLowerCase() === req.params.animalName.toLowerCase()
+    );
+
+    if (!animal) {
+      return res.status(404).json({
+        status: 404,
+        message: "Animal not found",
+        error: {
+          details: "The animal not found in database.",
+        },
+      });
+    }
+    return res.status(200).json({
+      status: 200,
+      message: "Receive data successfully",
+      data: animal,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      status: 500,
+      message: "Internal server error",
+      error: {
+        details: error.message
+      },
+    });
+  }
+};
+

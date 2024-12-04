@@ -7,9 +7,7 @@
 - [Authentication](#authentication)
 - [User Management](#user-management)
 - [Animal Data](#animal-data)
-- [Quiz Data](#quiz-data)
-- [Media Management](#media-management)
-- [User Statistics (Optional)](#user-statistics-optional)
+- [Quiz Data](#quiz-animal)
 
 ---
 
@@ -19,6 +17,7 @@
 
 - **Description**: Mendaftarkan pengguna baru ke sistem.
 - **Request Body**:
+
   ```json
   {
     "name": "XXXXX",
@@ -28,6 +27,7 @@
   ```
 
 - **Response**:
+
   ```json
   {
     "status": 201,
@@ -55,6 +55,7 @@
 
 - **Description**: Mengotentikasi pengguna melalui login.
 - **Request Body**:
+
   ```json
   {
     "email": "XXXXX@example.com",
@@ -63,6 +64,7 @@
   ```
 
 - **Response**:
+
   ```json
   {
     "status": 200,
@@ -124,6 +126,7 @@
 
 - **Description**: Updates profil pengguna berdasarkan ID.
 - **Request Body**:
+
   ```json
   {
     "name": "XXXXX",
@@ -133,6 +136,7 @@
   ```
 
 - **Response**:
+
   ```json
   {
     "status": 200,
@@ -163,10 +167,11 @@
 
 - **Description**: Deletes profil pengguna berdasarkan ID.
 - **Response**:
+
   ```json
-  { 
-    "status": 200, 
-    "message": "User deleted successfully" 
+  {
+    "status": 200,
+    "message": "User deleted successfully"
   }
   ```
 
@@ -185,55 +190,104 @@
 
 ### GET `/api/animals`
 
-- **Description**: Retrieves a list of all animals.
-- **Response**: Returns an array of animals with fields like name, description, facts, image URL, and audio URL.
+- **Description**: Mendapatkan daftar hewan yang tersedia.
+- **Response**:
+
+  ```json
+  {
+    "status": 200,
+    "message": "Receive data successfully",
+    "data": [
+      {
+        "name": "Kelelawar",
+        "scientific_name": "Chiroptera",
+        "description": "Kelelawar adalah satu-satunya mamalia yang bisa terbang! Mereka hidup di berbagai habitat seperti gua, pohon, dan bahkan bangunan kosong. Kebanyakan kelelawar aktif di malam hari (nokturnal) dan memiliki kemampuan luar biasa untuk menggunakan 'sonar alami' yang disebut ekolokasi. Ini membantu mereka menemukan makanan bahkan dalam kegelapan total! Makanan kelelawar bervariasi, ada yang makan buah-buahan (frugivora), serangga (insektivora), dan ada juga yang menghisap nektar bunga. Ukurannya beragam, mulai dari kelelawar kecil sepanjang 6 cm hingga kelelawar besar seperti kelelawar buah dengan sayap sepanjang 1,5 meter."
+      },
+      {
+        "name": "Beruang",
+        "scientific_name": "Ursidae",
+        "description": "Beruang adalah hewan besar dan kuat yang hidup di hutan, pegunungan, atau wilayah bersalju. Ada banyak jenis beruang, seperti beruang coklat, beruang kutub, dan beruang madu. Beruang dikenal sebagai omnivora; mereka memakan buah, ikan, dan bahkan serangga! Ukuran beruang bisa sangat besar, dengan berat mencapai 600 kilogram untuk beruang kutub. Mereka juga pelari cepat meskipun terlihat besar dan lamban! Beruang kutub misalnya, adalah perenang hebat yang bisa menjelajahi lautan untuk mencari makanan."
+      }, ...
+    ]
+  }
+  ```
 
 ### GET `/api/animals/:animalId`
 
-- **Description**: Fetches specific animal details by animalId.
-- **Response**: Returns detailed animal data including name, description, facts, image URL, and audio URL.
-
-## Animal Data
-
-### GET `/api/quizzes`
-
-- **Description**: Retrieves all quizzes.
-- **Response**: Returns an array of quiz data including question, answer options, and correct answer.
-
-### GET `/api/quizzes/:quizId`
-
-- **Description**: Fetches specific quiz details by quizId.
-- **Response**: Returns quiz details including question, options, and correct answer.
-
-## Media Management
-
-### POST `/api/media/upload`
-
-- **Description**: Uploads an animal image or audio file to Cloud Storage.
-- **Request**: Form Data: file - The image or audio file to upload.
-- **Response**: Returns URL of the uploaded file in Cloud Storage.
-
-### DELETE `/api/media/:fileName`
-
-- **Description**: Deletes media from Cloud Storage by file name.
-- **Response**: Returns confirmation of file deletion.
-
-## User Statistics (Optional)
-
-### POST `/api/stats/record`
-
-- **Description**: Records quiz results or other user statistics.
-- **Request Body**:
+- **Description**: Fetches specific animal details by animal name.
+- **Response**:
   ```json
   {
-    "userId": "string",
-    "quizId": "string",
-    "score": "number"
+    "status": 200,
+    "message": "Receive data successfully",
+    "data": {
+      "name": "Kelelawar",
+      "scientific_name": "Chiroptera",
+      "description": "Kelelawar adalah satu-satunya mamalia yang bisa terbang! Mereka hidup di berbagai habitat seperti gua, pohon, dan bahkan bangunan kosong. Kebanyakan kelelawar aktif di malam hari (nokturnal) dan memiliki kemampuan luar biasa untuk menggunakan 'sonar alami' yang disebut ekolokasi. Ini membantu mereka menemukan makanan bahkan dalam kegelapan total! ..."
+    }
   }
   ```
-- **Response**: Returns confirmation of recorded statistics.
+- **Response (Error)**:
+  ```json
+  {
+    "status": 404,
+    "message": "Animal not found",
+    "error": { "details": "The animal not found in database." }
+  }
+  ```
 
-### GET `/api/stats/:userId`
+## Quiz Animal
 
-- **Description**: Fetches quiz scores or statistics for a specific user by userId.
-- **Response**: Returns user's quiz statistics or scores.
+### GET `/api/quizzes/:animalName`
+
+- **Description**: Retrieves spesific quizzes by name animals.
+- **Response**:
+  ```json
+  {
+    "status": 200,
+    "message": "Quiz animal data successfully",
+    "data": {
+      "quiz_id": 1,
+      "animal_name": "Kelelawar",
+      "quiz_question": "Apa makanan utama kelelawar buah?",
+      "quiz_options": ["Serangga", "Buah", "Ikan", "Daging"],
+      "correct_answer": "Buah",
+      "fun_fact": "Kelelawar buah memainkan peran penting dalam ekosistem dengan menyebarkan biji dan membantu penyerbukan tanaman. Mereka adalah makhluk nokturnal yang menggunakan penglihatan dan penciuman yang tajam untuk menemukan buah di malam hari."
+    }
+  }
+  ```
+- **Response (Error)**:
+  ```json
+  {
+    "status": 404,
+    "message": "Quiz not found",
+    "error": { "details": "The quiz animal not found in database." }
+  }
+  ```
+
+### GET `/api/quizzes/:animalName/verify`
+
+- **Description**: Fetches specific quiz details by quizId.
+- **Response (Correct)**:
+  ```json
+  {
+    "status": 200,
+    "message": "Correct answer!",
+    "data": {
+      "correct": true,
+      "fun_fact": "Kelelawar buah memainkan peran penting dalam ekosistem dengan menyebarkan biji dan membantu penyerbukan tanaman. Mereka adalah makhluk nokturnal yang menggunakan penglihatan dan penciuman yang tajam untuk menemukan buah di malam hari."
+    }
+  }
+  ```
+- **Response (Incorrect)**:
+  ```json
+  {
+    "status": 200,
+    "message": "Incorrect answer",
+    "data": { "correct": false, "correct_answer": "Buah" }
+  }
+  ```
+- **Response (Error)**:
+  ```json
+  { "status": 400, "message": "Answer not provided" }
+  ```
