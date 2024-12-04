@@ -265,9 +265,16 @@
   }
   ```
 
-### GET `/api/quizzes/:animalName/verify`
+### POST `/api/quizzes/:animalName/verify`
 
 - **Description**: Fetches specific quiz details by quizId.
+- **Request Body**:
+
+  ```json
+  {
+    "answer": "xxxx"
+  }
+  ```
 - **Response (Correct)**:
   ```json
   {
