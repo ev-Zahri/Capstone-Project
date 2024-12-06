@@ -20,9 +20,9 @@
 
   ```json
   {
-    "name": "XXXXX",
-    "email": "XXXXX@example.com",
-    "password": "XXXXX"
+    "username": "XXXXX",
+    "age": "XXXXX@example.com",
+    "profilePicture": "file image"
   }
   ```
 
@@ -33,9 +33,12 @@
     "status": 201,
     "message": "User registered successfully",
     "data": {
-      "userId": "1111ce6b6fd544d5",
-      "name": "XXXXX",
-      "email": "XXXXX@example.com"
+      "id": "937e3803016e457d",
+      "username": "AAA",
+      "age": 20,
+      "profilePicture": "uploads/1733487437686_88451924.jpeg",
+      "insertedAt": "2024-12-06T12:17:18.557Z",
+      "updatedAt": "2024-12-06T12:17:18.557Z"
     }
   }
   ```
@@ -44,10 +47,7 @@
   ```json
   {
     "status": 400,
-    "message": "User already exists",
-    "error": {
-      "details": "The user has registered an account with the same email address"
-    }
+    "message": "All fields (username, age, profile picture) are required."
   }
   ```
 
@@ -58,8 +58,7 @@
 
   ```json
   {
-    "email": "XXXXX@example.com",
-    "password": "XXXXX"
+    "username": "AAA"
   }
   ```
 
@@ -68,14 +67,14 @@
   ```json
   {
     "status": 200,
-    "message": "User logged in successfully",
+    "message": "Login successful.",
     "data": {
-      "id": "xxxxxxx",
-      "name": "XXXXX",
-      "email": "XXXXX@example.com",
-      "password": "XXXXX",
-      "insertedAt": "2024-11-28T12:38:15.569Z",
-      "updatedAt": "2024-11-28T12:38:15.569Z"
+      "id": "937e3803016e457d",
+      "username": "AAA",
+      "age": 20,
+      "profilePicture": "uploads/1733487437686_88451924.jpeg",
+      "insertedAt": "2024-12-06T12:17:18.557Z",
+      "updatedAt": "2024-12-06T12:17:18.557Z"
     }
   }
   ```
@@ -85,29 +84,27 @@
   {
     "status": 400,
     "message": "Invalid credentials",
-    "error": {
-      "details": "Authentication failed. Please check your username and password."
-    }
+    "error": { "details": "Username is required for login" }
   }
   ```
 
 ## User Management
 
-### GET `/api/users/:userId`
+### GET `/api/users/:username`
 
 - **Description**: Mendapatkan profil pengguna berdasarkan ID.
 - **Response**:
   ```json
   {
     "status": 200,
-    "message": "Receive data successfully",
+    "message": "User retrieved successfully",
     "data": {
-      "id": "xxxxxx",
-      "name": "XXXXX",
-      "email": "XXXXX@example.com",
-      "password": "XXXXX",
-      "insertedAt": "2024-11-28T12:38:15.569Z",
-      "updatedAt": "2024-11-28T12:38:15.569Z"
+      "id": "937e3803016e457d",
+      "username": "AAA",
+      "age": 20,
+      "profilePicture": "uploads/1733487437686_88451924.jpeg",
+      "insertedAt": "2024-12-06T12:17:18.557Z",
+      "updatedAt": "2024-12-06T12:17:18.557Z"
     }
   }
   ```
@@ -116,22 +113,20 @@
   {
     "status": 404,
     "message": "User not found",
-    "error": {
-      "details": "The user not found in database. Try creating an account."
-    }
+    "error": { "details": "The user does not exist in the database." }
   }
   ```
 
-### PUT `/api/users/:userId`
+### PUT `/api/users/:username`
 
 - **Description**: Updates profil pengguna berdasarkan ID.
 - **Request Body**:
 
   ```json
   {
-    "name": "XXXXX",
-    "email": "XXXXX@example.com",
-    "password": "XXXXX"
+    "username": "XXXXX",
+    "age": "XXXXX@example.com",
+    "profilePicture": "file image"
   }
   ```
 
@@ -142,12 +137,12 @@
     "status": 200,
     "message": "User updated successfully",
     "data": {
-      "id": "xxxxx",
-      "insertedAt": "2024-11-28T12:38:15.569Z",
-      "password": "xxxxx",
-      "name": "xxxxx",
-      "email": "xxxxx@example.com",
-      "updatedAt": "2024-11-28T13:04:48.457Z"
+      "id": "937e3803016e457d",
+      "username": "AAA",
+      "insertedAt": "2024-12-06T12:17:18.557Z",
+      "profilePicture": "/uploads/1733487648907_d3ab05e7.jpeg",
+      "age": "20",
+      "updatedAt": "2024-12-06T12:20:49.000Z"
     }
   }
   ```
@@ -157,22 +152,17 @@
   {
     "status": 404,
     "message": "User not found",
-    "error": {
-      "details": "The user not found in database. Try creating an account."
-    }
+    "error": { "details": "The user does not exist in the database." }
   }
   ```
 
-### DELETE `/api/users/:userId`
+### DELETE `/api/users/:username`
 
 - **Description**: Deletes profil pengguna berdasarkan ID.
 - **Response**:
 
   ```json
-  {
-    "status": 200,
-    "message": "User deleted successfully"
-  }
+  { "status": 200, "message": "User deleted successfully" }
   ```
 
 - **Response (Error)**:
@@ -180,9 +170,7 @@
   {
     "status": 404,
     "message": "User not found",
-    "error": {
-      "details": "The user not found in database. Try creating an account."
-    }
+    "error": { "details": "The user does not exist in the database." }
   }
   ```
 
@@ -275,6 +263,7 @@
     "answer": "xxxx"
   }
   ```
+
 - **Response (Correct)**:
   ```json
   {
