@@ -1,44 +1,62 @@
 const multer = require('multer');
-const path = require('path');
-const sharp = require('sharp');
-const fs = require('fs');
-const { db } = require('../config/db');
+const { db, bucket } = require('../config/db');
 const { v4: uuidv4 } = require('uuid');
 
 exports.registerUser = async (req, res) => {
     try {
         // Validasi input
         const { username, age } = req.body;
-        const id = uuidv4().replace(/-/g, '').slice(0, 16);
+        const id = uuidv4().replace(/-/g, '').slice(0, 8);
 
         if (!username || !age) {
             return res.status(400).json({
                 status: 400,
-                message: "All fields (username, age, profile picture) are required.",
+                message: "All fields (username, age) are required.",
             });
         }
 
         const usersRef = db.collection('users');
         const doc = await usersRef.where('username', '==', username).get();
-        if (doc.exists) {
+        if (!doc.empty) {
             return res.status(400).json({
                 status: 400,
                 message: "User already exists",
                 error: {
-                    details: "The user has registered an account with the same email address",
+                    details: "The user has registered an account with the same username",
                 }
             });
         }
 
-        // Nama file dari middleware multer
-        const nameProfileImg = `uploads/${req.file.filename}`;
+        let profilePictureUrl = null;
+
+        if (req.file) {
+            // Jika file diberikan, upload ke bucket GCP
+            const file = req.file;
+            const bucketFileName = `profile_image-users/${id}-${file.originalname}`;
+            const fileUpload = bucket.file(bucketFileName);
+            const fileStream = fileUpload.createWriteStream({
+                metadata: {
+                    contentType: file.mimetype,
+                },
+            });
+
+            fileStream.end(file.buffer);
+
+            // Tunggu upload selesai
+            await new Promise((resolve, reject) => {
+                fileStream.on('finish', resolve);
+                fileStream.on('error', reject);
+            });
+
+            profilePictureUrl = `https://storage.googleapis.com/${bucket.name}/${bucketFileName}`;
+        }
 
         // Simpan data pengguna di Firestore
         const newUser = {
             id: id,
             username,
             age: parseInt(age, 10),
-            profilePicture: nameProfileImg,
+            profilePicture: profilePictureUrl, // Bisa null jika tidak diunggah
             insertedAt: new Date().toISOString(),
             updatedAt: new Date().toISOString(),
         };
@@ -60,6 +78,63 @@ exports.registerUser = async (req, res) => {
         });
     }
 };
+
+
+// exports.registerUser = async (req, res) => {
+//     try {
+//         // Validasi input
+//         const { username, age } = req.body;
+//         const id = uuidv4().replace(/-/g, '').slice(0, 16);
+
+//         if (!username || !age) {
+//             return res.status(400).json({
+//                 status: 400,
+//                 message: "All fields (username, age, profile picture) are required.",
+//             });
+//         }
+
+//         const usersRef = db.collection('users');
+//         const doc = await usersRef.where('username', '==', username).get();
+//         if (doc.exists) {
+//             return res.status(400).json({
+//                 status: 400,
+//                 message: "User already exists",
+//                 error: {
+//                     details: "The user has registered an account with the same email address",
+//                 }
+//             });
+//         }
+
+//         // Nama file dari middleware multer
+//         const nameProfileImg = `uploads/${req.file.filename}`;
+
+//         // Simpan data pengguna di Firestore
+//         const newUser = {
+//             id: id,
+//             username,
+//             age: parseInt(age, 10),
+//             profilePicture: nameProfileImg,
+//             insertedAt: new Date().toISOString(),
+//             updatedAt: new Date().toISOString(),
+//         };
+
+//         await usersRef.doc(newUser.id).set(newUser);
+
+//         return res.status(201).json({
+//             status: 201,
+//             message: "User registered successfully",
+//             data: newUser,
+//         });
+//     } catch (error) {
+//         return res.status(500).json({
+//             status: 500,
+//             message: "Failed to register user.",
+//             error: {
+//                 details: error.message,
+//             },
+//         });
+//     }
+// };
 
 
 exports.loginUser = async (req, res) => {

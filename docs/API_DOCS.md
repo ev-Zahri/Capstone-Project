@@ -124,8 +124,8 @@
 
   ```json
   {
-    "username": "XXXXX",
-    "age": "XXXXX@example.com",
+    "usernameUpdate": "XXXXX",
+    "ageUpdate": "XXXXX@example.com",
     "profilePicture": "file image"
   }
   ```
@@ -200,7 +200,7 @@
   }
   ```
 
-### GET `/api/animals/:animalId`
+### GET `/api/animals/:animalName`
 
 - **Description**: Fetches specific animal details by animal name.
 - **Response**:
@@ -255,7 +255,7 @@
 
 ### POST `/api/quizzes/:animalName/verify`
 
-- **Description**: Fetches specific quiz details by quizId.
+- **Description**: Fetches specific quiz details by animalName.
 - **Request Body**:
 
   ```json
