@@ -4,19 +4,18 @@ const path = require('path');
 const dataFilePath = path.join(__dirname, '../assets/dataset/animals_data.json');
 
 const readDataFromFile = () => {
-  try {
-    const data = fs.readFileSync(dataFilePath, 'utf8');
-    return JSON.parse(data);
-  } catch (error) {
-    return res.status(500).json({
-      status: 500,
-      message: "Error reading data from file",
-      error: {
-        data: [],
-        details: error.message,
-      },
-    });
-  }
+  const data = JSON.parse(fs.readFileSync(dataFilePath, 'utf8'));
+  return data.map((animal) => {
+    return {
+      ...animal,
+      image_url: animal.image_url 
+        ? `https://storage.googleapis.com/${process.env.GCP_STORAGE_BUCKET}/assets/${animal.image_url}`
+        : null,
+      sound_url: animal.sound_url 
+        ? `https://storage.googleapis.com/${process.env.GCP_STORAGE_BUCKET}/assets/${animal.sound_url}`
+        : null,
+    };
+  });
 };
 
 exports.getAllAnimals = (req, res) => {
@@ -35,7 +34,6 @@ exports.getAnimalByName = (req, res) => {
       (a) => a && typeof a.name === 'string' && a.name.trim() !== ''
     );
 
-    // Cari berdasarkan nama (case-insensitive)
     const animal = validAnimals.find(
       (a) => a.name.toLowerCase() === req.params.animalName.toLowerCase()
     );
